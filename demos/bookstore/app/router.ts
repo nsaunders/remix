@@ -7,16 +7,16 @@ import { methodOverride } from '@remix-run/fetch-router/method-override-middlewa
 import { routes } from '../routes.ts'
 import { uploadHandler } from './utils/uploads.ts'
 
-import adminHandlers from './admin.tsx'
-import accountHandlers from './account.tsx'
-import authHandlers from './auth.tsx'
-import booksHandlers from './books.tsx'
-import cartHandlers from './cart.tsx'
-import checkoutHandlers from './checkout.tsx'
-import fragmentsHandlers from './fragments.tsx'
+import adminHandlers from './admin.ts'
+import accountHandlers from './account.ts'
+import authHandlers from './auth.ts'
+import booksHandlers from './books.ts'
+import cartHandlers from './cart.ts'
+import checkoutHandlers from './checkout.ts'
+import fragmentsHandlers from './fragments.ts'
 import * as publicHandlers from './public.ts'
-import * as marketingHandlers from './marketing.tsx'
-import { uploadsHandler } from './uploads.tsx'
+import * as marketingHandlers from './marketing.ts'
+import { uploadsHandler } from './uploads.ts'
 
 let middleware = []
 

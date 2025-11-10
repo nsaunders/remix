@@ -1,7 +1,7 @@
 import { routes } from '../../routes.ts'
 
 import { getBookBySlug } from '../models/books.ts'
-import { BookCard } from '../components/book-card.tsx'
+import { BookCard } from '../components/book-card.ts'
 import { getStorage } from './context.ts'
 import { getCart } from '../models/cart.ts'
 import { SESSION_ID_KEY } from '../middleware/auth.ts'
@@ -24,7 +24,7 @@ export async function resolveFrame(frameSrc: string) {
     let cart = getCart(getStorage().get(SESSION_ID_KEY))
     let inCart = cart.items.some((item) => item.slug === slug)
 
-    return <BookCard book={book} inCart={inCart} />
+    return BookCard({ book, inCart })
   }
 
   throw new Error(`Failed to fetch ${frameSrc}`)
